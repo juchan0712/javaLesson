@@ -49,6 +49,7 @@ public class A20BankExam {
                 case 4:
                     run = false;
                     System.out.println("프로그램을 종료합니다.");
+                    System.out.println("오늘은 그만하고 싶어요 ㅜㅜㅜ");
                     break;
 
                 default:
