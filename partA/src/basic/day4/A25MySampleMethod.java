@@ -9,7 +9,7 @@ public class A25MySampleMethod {
         int result = addMToN(2,5);
         boolean isOk = checkJumsu(67);
        
-        printGugudan();
+        printGugudan(); 
     }
 
     private static boolean checkJumsu(int i){
