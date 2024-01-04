@@ -45,12 +45,13 @@ public class B01MyClassMain {
         my2.field3 = new double[] { 34.12, 23.99, 6.78 };
         System.out.println("my2 해시코드 (필드값 변경 후) : " + my2.hashCode());
 
-        System.out.println("my2.field1 : " + my2.field1); // String
-        System.out.println("my2.field2 : " + my2.field2); // int
-        System.out.println("my2.field3 : " + my2.field3); // double
-        System.out.println("my2.field3 배열의 크기 : " + my2.field3.length); // double 배열
-        System.out.println("my2.field3 배열의 요소 값 : " + Arrays.toString(my2.field3)); // double 배열
-        System.out.println("------------------------------------------------------");
-
+        MyClass2 my3 = new MyClass2();
+        
+        //Myclass1 err = new Myclass2();    //오류 : 객체의 타입과 변수의 타입이 불일치 
+        
+        //private : MyClass2 클래스 외에는 사용할 수 없는 필드.
+        System.out.println("my3.field1 : " + my3.field1); // String
+        System.out.println("my3.field2 : " + my3.field2); // int
+        System.out.println("my3.field3 : " + my3.field3); // double
     }
 }
