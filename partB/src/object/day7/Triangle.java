@@ -55,10 +55,17 @@ public class Triangle extends Shape{
 	public void print() {  //오류: final메소드 오버라이드 안됩니다.
 		System.out.println("나는 트라이앵글 입니다.");
 	}
-*/	
+*/
 	//자식클래스가  추가로 정의한 메소드
 	public void printAngle() {
 		System.out.println("삼각형 각도 : " + getAngle());
+	}
+
+	// 부모클래스의 toString
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "[각도 = " + this.angle+ "]";
 	}
 
 	/*  클래스의 상속 - 자바에서 제공하는 클래스들의 상속관계를 이해하기 위함. 우리가 직접 만드는 것은 몇가지 기능정도.

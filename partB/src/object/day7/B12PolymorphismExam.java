@@ -34,7 +34,7 @@ public class B12PolymorphismExam {
             System.out.println(i + " 번 도형입니다. ");
             shapes[i].draw();
             //부모타입으로 참조되는 객체들이 재정의된 draw() 메소드를 실행합니다.
-            //다형성은 메소드는 한가지를 통일해서 실행하나 결과는 여러 형태로 보이는것 입니다.
+            //※다형성※은 메소드는 한가지를 통일해서 실행하나 결과는 여러 형태로 보이는것 입니다.
             //                      ㄴ 자식클래스가 ※메소드 오버라이드※를 할 수 있기 때문에 가능합니다.
         }
         System.out.println("~~~~~ 자식객체의 실제 타입을 검사하는 instanceof 연산 ~~~~~");
@@ -65,9 +65,17 @@ public class B12PolymorphismExam {
             }
         }
 
+        //Up Casting
+        Shape sh = new Diamond();
+        
        
+        //Down Casting - sh의 실제 객체가 다운 캐스팅하려는 타입인지 검사 필수. instanceof 연산으로 검사하기.
+        //  (아래 예시)  sh의 실제 객체가 아닌 것(Triangle, Square)을 Diamond로 캐스팅하면 오류.
+
+        Diamond diamond = (Diamond)sh;
         
-        
+        //자식객체의 인스턴스 메소드 iAmDiamond는 반드시 다운캐스팅을 해야 실행 가능
+        diamond.iAmDiamond();
         
     } 
     
